@@ -84,7 +84,7 @@ print(np.sum(Pi_test))
 PMI_test = np.zeros([vocabulary_size, vocabulary_size])
 for i in range(vocabulary_size):
   for j in range(vocabulary_size):
-    if Pi_test[i] * Pi_test[j] > 0 and Pij[i,j] > 0:
+    if Pi_test[i] * Pi_test[j] > 0 and Pij_test[i,j] > 0:
       PMI_test[i,j] = np.log(Pij_test[i,j] / (Pi_test[i] * Pi_test[j]))
 
 PPMI_test = np.maximum(PMI_test, 0.0)
