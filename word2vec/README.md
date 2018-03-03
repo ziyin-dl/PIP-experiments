@@ -63,3 +63,8 @@ File | What's in it?
 `word2vec_optimized_test.py` | Integration test for word2vec_optimized.
 `word2vec_kernels.cc` | Kernels for the custom input and training ops.
 `word2vec_ops.cc` | The declarations of the custom ops.
+` run.bash` | obtain embeddings of different dimensions.
+` eval_run.bash` | evaluate embeddings of different dimensions.
+`word2vec_eval.py` | evaluate word2vec vectors on the similarity tests.
+`plot.py` | plot the top-4 hit rate curve for the Google analogy tests.
+`plot_sim.py` | plot the correlation curve for the word similarity tests.
