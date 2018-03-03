@@ -1,4 +1,5 @@
 Scripts for processing the sts dataset  
+
 File | What's in it?
 --- | ---
 `tfidf.py` | produces tfidf matrices and the empirical spectrum  

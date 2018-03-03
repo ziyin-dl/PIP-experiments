@@ -1,4 +1,5 @@
 Scripts for processing the text8 corpus  
+
 File | What's in it?
 --- | ---
 `PPMI.py` | produces the PPMI matrix (Word2Vec surrogate) from the co-occurrence matrices.  
