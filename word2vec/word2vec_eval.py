@@ -154,7 +154,7 @@ class Word2Vec(object):
     self.save_vocab()
     self.question_accuracy = []
     self.similarity_accuracy = {}
-    self.test_set_files = ['wordsim353.csv', 'mturk771.csv', 'rg65.csv', 'mc91.csv']
+    self.test_set_files = ['wordsim353.csv', 'mturk771.csv']
     self.test_rows_list = {}
 
   def load_test_file(self, test_set_file):

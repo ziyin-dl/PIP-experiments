@@ -63,7 +63,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--folder", required=True, type=str)
   args = parser.parse_args()
-  test_set_files = ['wordsim353.csv', 'mturk771.csv', 'rg65.csv', 'mc91.csv']
+  test_set_files = ['wordsim353.csv', 'mturk771.csv']
   test_rows_list = [load_test_file(test_set_file) for test_set_file in test_set_files]
   sim_tests = {}
   for test_file in test_set_files:

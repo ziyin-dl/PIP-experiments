@@ -151,7 +151,7 @@ for item in count:
 
 log_count = np.log(1 + Nij)
 
-test_set_files = ['wordsim353.csv', 'mturk771.csv', 'rg65.csv', 'mc91.csv']
+test_set_files = ['wordsim353.csv', 'mturk771.csv']
 test_rows_list = [load_test_file(test_set_file) for test_set_file in test_set_files]
 
 U, D, V = np.linalg.svd(log_count)
