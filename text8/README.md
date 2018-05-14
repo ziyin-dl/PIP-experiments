@@ -1,4 +1,5 @@
 Scripts for processing the text8 corpus  
+see the `run.sh` file for usage  
 
 File | What's in it?
 --- | ---

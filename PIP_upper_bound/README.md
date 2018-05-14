@@ -1,4 +1,5 @@
 Scripts for generating the upper bounds  
+See the run.sh file for how to generate the results (using PMI on text8 as an example)
 
 File | What's in it?
 --- | ---
