@@ -1,7 +1,14 @@
 # PIP-experiments
 
-This is the source code for all experiments of the paper, "PIP Distance: A Unitary-invariant Metric for Understanding Functionality and Dimensionality of Vector Embeddings". The paper is publicly available at
+This is the source code for all experiments of the paper, "Understand Functionality and Dimensionality of Vector Embeddings: the Distributional Hypothesis, the Pairwise Inner Product Loss and Its Bias-Variance Trade-off". The paper is publicly available at
 https://arxiv.org/abs/1803.00502
+
+@article{yin2018pairwise,
+  title={Understand Functionality and Dimensionality of Vector Embeddings: the Distributional Hypothesis, the Pairwise Inner Product Loss and Its Bias-Variance Trade-off},
+  author={Yin, Zi},
+  journal={arXiv preprint arXiv:1803.00502},
+  year={2018}
+}
 
 All experiments in the paper are included, in particular:
 1. Matrix perturbation theoretical PIP loss upper bound;
