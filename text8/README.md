@@ -1,5 +1,6 @@
 Scripts for processing the text8 corpus  
-see the `run.sh` file for usage  
+See the `run.sh` file for usage  
+After running the scripts, move the signal (.pkl file) and noise (which is a single number printed in STDOUT) to PIP_upper_bound directory for further processing  
 
 File | What's in it?
 --- | ---

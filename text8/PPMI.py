@@ -43,6 +43,7 @@ def test(rows, dictionary, embeddings_U):
       score2.append(embeddings_U[word1,:].dot(embeddings_U[word2,:].T) / (np.linalg.norm(embeddings_U[word1,:], 2) * np.linalg.norm(embeddings_U[word2,:], 2)))
   return score1, score2
 
+
 def maybe_download(filename, expected_bytes):
   """Download a file if not present, and make sure it's the right size."""
   if not os.path.exists(filename):
@@ -158,20 +159,22 @@ Pi = Ni / np.sum(Ni)
 PMI = np.zeros([vocabulary_size, vocabulary_size])
 for i in range(vocabulary_size):
   for j in range(vocabulary_size):
-    if Pi[i] * Pi[j] > 0:
+    if Pi[i] * Pi[j] > 0 and Pij[i, j] > 0:
       PMI[i,j] = np.log(Pij[i,j] / (Pi[i] * Pi[j]))
-
-PPMI = np.maximum(PMI, 0.0)
-test_set_files = ['wordsim353.csv', 'mturk771.csv', 'rg65.csv', 'mc91.csv']
-test_rows_list = [load_test_file(test_set_file) for test_set_file in test_set_files]
+PPMI = PMI
+PPMI[PPMI < 0] = 0
 
 U, D, V = np.linalg.svd(PPMI)
 plt.plot(D)
 plt.savefig('sv_PPMI_top{}.pdf'.format(vocabulary_size))
 plt.close()
 
-with open('sv_text8.pkl', 'w') as f:
+with open('sv_text8_pmi.pkl', 'w') as f:
   pickle.dump(D, f)
+
+# test_set_files = ['wordsim353.csv', 'mturk771.csv']
+test_set_files = ['wordsim353.csv']
+test_rows_list = [load_test_file(test_set_file) for test_set_file in test_set_files]
 
 dir_name = 'test_results'
 sp.check_output('mkdir -p {}'.format(dir_name), shell=True)

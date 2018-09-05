@@ -68,7 +68,6 @@ plt.close()
 with open('sv_PPMI_wiki.pkl', 'w') as f:
   pickle.dump(D, f)
 
-"""
 dir_name = 'test_results'
 sp.check_output('mkdir -p {}'.format(dir_name), shell=True)
 
@@ -102,4 +101,3 @@ for idx, alpha in enumerate(args.alpha):
     plt.xlabel('dimensions')
   plt.savefig('{}/scores_{}.pdf'.format(dir_name, alpha))
   plt.close()
-"""

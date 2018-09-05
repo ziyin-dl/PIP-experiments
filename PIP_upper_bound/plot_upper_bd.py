@@ -12,14 +12,9 @@ import numpy as np
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import bisect
 import matplotlib
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-rc('text', usetex=True)
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import argparse
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
 
 parser = argparse.ArgumentParser(description='experiment with the effect of signal/noise for the invariant spaces.')
 parser.add_argument('--sigma', required = True, default = 0.1, type = float, help='noise level')
@@ -62,7 +57,7 @@ for i in range(len(D)):
 print('rank is {}'.format(rank))
 
 dir_name = '{}/alpha_{}_sigma_{}_rank_{}'.format(args.data, alpha, sigma, rank)
-local_dir_name = '/hdd/zyin/dropbox/matrix_exp/{}'.format(dir_name)
+local_dir_name = 'matrix_exp/{}'.format(dir_name)
 sp.check_output('mkdir -p {}'.format(dir_name), shell=True)
 try:
   sp.check_output('mkdir -p {}'.format(local_dir_name), shell=True)
@@ -127,7 +122,7 @@ for level, pct, endpoints, color in zip(level_sets, conf_ints, level_sets_endpoi
   xlim = ax.get_xlim()
   plt.axhline(y=level, xmin=(endpoints[0] - xlim[0]) / (xlim[1] - xlim[0]), 
     xmax=(endpoints[1] - xlim[0]) / (xlim[1]-xlim[0]),
-    label='+{}'.format(pct * 100) + r'$\%$', ls='--', c=color)
+    label='+{}'.format(pct * 100) + r'percent', ls='--', c=color)
 lgd = ax.legend(loc='upper right')
 plt.xlabel('Dimensions')
 plt.ylabel('PIP Error')
