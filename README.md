@@ -2,12 +2,16 @@
 
 ## Tool for word embedding dimensionality selection
 We have cleaned all experimental code to provide a unified tool in the following repo
+
 https://github.com/aaaasssddf/word-embedding-dimensionality-selection
 
 ## Experiments in this repo
 This is the source code for all experiments of the paper, "Understand Functionality and Dimensionality of Vector Embeddings: the Distributional Hypothesis, the Pairwise Inner Product Loss and Its Bias-Variance Trade-off". The paper is publicly available at
+
 https://arxiv.org/abs/1803.00502
+
 The NIPS paper can be found here
+
 https://nips.cc/Conferences/2018/Schedule?showEvent=12567
 ```
 @inproceedings{yin2018dimensionality,
